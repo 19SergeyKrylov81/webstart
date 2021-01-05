@@ -1,5 +1,6 @@
 body
   font-family: sans-serif
+  color: $text-color
 img
   max-width: 100%
 .container
@@ -10,10 +11,13 @@ img
     width: 760px
 @media (max-width: 768px)
   .container
-    max-width: 580px
+    max-width: 480px
     width: 95%
 .button
   border-radius: 10px
   background-color: $main-color
   border: none
   padding: 18px 30px
+@media (max-width: 400px)
+  .container
+    max-width: 275px
