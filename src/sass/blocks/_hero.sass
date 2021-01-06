@@ -1,23 +1,24 @@
 .hero
   background-color: $section-color
   &-block
-    padding-top: 50px
+    padding-top: 43px
     padding-bottom: 52px
     display: flex
     justify-content: space-between
   &-text
-    flex-basis: 50%
+    flex-basis: 46%
     padding-right: 55px
     &__title
       font-size: 41px
-      font-weight: 800
-      margin-top: 20px
+      +bold
+      margin-top: 29px
       margin-bottom: 35px
+      margin-left: -1px
       line-height: 1.4em
     &__subtitle
       font-size: 20px
-      font-weight: 800
-      margin-bottom: 64px
+      +bold
+      margin-bottom: 65px
       display: block
   &-list
     margin: 0
@@ -35,13 +36,13 @@
       display: flex
       justify-content: center
       align-items: center
-      margin-right: 30px
+      margin-right: 25px
     &__text
-      max-width: 231px
+      max-width: 232px
       font-size: 14px
       line-height: 24px
   &-img
-    margin-right: -35px
+    margin-right: -39px
 @media (max-width: 1200px)
   .hero
     &-block
