@@ -1,0 +1,86 @@
+.programm
+  padding-top: 80px
+  padding-bottom: 80px
+  &__title
+    width: 655px
+    margin-bottom: 59px
+  &__subtitle
+    margin-bottom: 58px
+.step
+  width: 155px
+  text-align: center  
+  &:not(:last-child)
+    &:before
+      content: ''
+      display: block
+      background: url("../img/programm/arrow.png")
+      width: 72px
+      height: 25px
+      margin-left: 170px
+  &:last-child
+    &::before
+      content: ''
+      display: block
+      width: 72px
+      height: 25px        
+  &s
+    display: flex
+    justify-content: space-between
+  &__icon
+    margin: auto
+    width: 100px
+    height: 100px
+    border: 3px solid $main-color
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    margin-bottom: 30px
+  &__text
+    line-height: 20px
+    font-size: 14px
+@media (max-width: 1200px)
+  .step
+    width: 130px 
+    &:not(:last-child)
+      &:before
+        background: url("../img/programm/arrow-medium.png")
+        width: 49px
+        height: 16px
+        margin-left: 120px
+    &:last-child
+      &::before
+        width: 49px
+        height: 16px 
+    &__icon
+      width: 80px
+      height: 80px
+    &__img
+      width: 35px
+      height: 35px
+    &__text
+      font-size: 12px
+@media (max-width: 768px)
+  .programm
+    padding-top: 40px
+    padding-bottom: 40px
+    &__title
+      font-size: 18px
+      line-height: normal
+      width: 236px
+      margin-bottom: 27px
+    &__subtitle
+      font-size: 14px
+      margin-bottom: 34px
+  .step
+    &s
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    &:not(:last-child)
+      margin-bottom: 30px
+      &::before
+        background: #fff
+        width: 0
+        height: 0
+        
