@@ -53,7 +53,9 @@ img {
 }
 
 .section-title {
-  font-size: 24px;
+  font-size: 30px;
+  line-height: 45px;
+  text-align: center;
   font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
 }
@@ -61,6 +63,7 @@ img {
 .section-subtitle {
   font-size: 16px;
   display: block;
+  text-align: center;
 }
 
 .input {
@@ -74,6 +77,10 @@ img {
 .input:focus {
   outline: none;
   border: 1px solid #ffd200;
+}
+
+.arrows__left:hover, .arrows__right:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 1200px) {
@@ -97,6 +104,12 @@ img {
 
 .navbar {
   padding: 8px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navbar-block {
@@ -156,7 +169,7 @@ img {
 
 @media (max-width: 768px) {
   .navbar {
-    padding-bottom: 21px;
+    padding: 8px 0 4px;
   }
   .navbar__contacts {
     display: none;
@@ -345,11 +358,14 @@ img {
   margin-top: 0;
   max-width: 350px;
   margin-bottom: 18px;
+  font-size: 24px;
+  text-align: left;
 }
 
 .offer__subtitle {
   margin-bottom: 29px;
   max-width: 235px;
+  text-align: left;
 }
 
 .offer__input {
@@ -478,6 +494,183 @@ img {
   }
   .offer-feedback__text:first-child {
     margin-bottom: 15px;
+  }
+}
+
+.portfolio {
+  padding-top: 90px;
+  padding-bottom: 100px;
+  background: #f5f5f5 url("../img/portfolio/portfolio-plotter.jpg") repeat-y left;
+  background-size: 50%;
+}
+
+.portfolio__title {
+  text-align: center;
+  width: 600px;
+  margin: auto;
+  margin-bottom: 70px;
+}
+
+.portfolio__arrows {
+  width: 120px;
+  margin: auto;
+  margin-top: 68px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.slider__img {
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .portfolio {
+    background: #f5f5f5;
+    padding-top: 43px;
+    padding-bottom: 64px;
+  }
+  .portfolio__title {
+    width: 270px;
+    font-size: 18px;
+  }
+}
+
+.price {
+  padding-top: 90px;
+  padding-bottom: 50px;
+}
+
+.price__title {
+  width: 515px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.price__subtitle {
+  margin-bottom: 59px;
+}
+
+.price__card {
+  margin-bottom: 30px;
+}
+
+.card {
+  border: 1px solid #e8e8e8;
+  text-align: center;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover .card-wrap__img::before {
+  opacity: 1;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card-wrap__img {
+  position: relative;
+}
+
+.card-wrap__img:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ffd200), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to top, #ffd200 0%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.card__img {
+  display: block;
+}
+
+.card__text {
+  padding-top: 39px;
+  padding-bottom: 40px;
+}
+
+.card__title {
+  margin: 0 auto;
+}
+
+.card__link {
+  text-decoration: none;
+  color: #333333;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 31px;
+  font-size: 16px;
+  position: relative;
+}
+
+.card__link:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #ffd200;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.card__link:hover::after {
+  height: 12px;
+}
+
+@media (max-width: 768px) {
+  .price {
+    padding: 50px 0;
+  }
+  .price__title {
+    font-size: 18px;
+    width: 242px;
+    line-height: normal;
+    margin-bottom: 27px;
+  }
+  .price__subtitle {
+    font-size: 14px;
+    margin-bottom: 55px;
+  }
+  .price__card:last-child {
+    margin-bottom: 0;
+  }
+  .cards {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .card__text {
+    padding: 30px 0 35px;
+  }
+  .card__link {
+    margin-top: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */

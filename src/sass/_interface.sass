@@ -21,11 +21,14 @@ img
 .section 
   padding-bottom: 90px
   &-title
-    font-size: 24px
+    font-size: 30px
+    line-height: 45px
+    text-align: center
     +bold
   &-subtitle
     font-size: 16px
     display: block
+    text-align: center
 .input
   color: $input-color
   padding: 26px
@@ -35,7 +38,10 @@ img
   &:focus
     outline: none
     border: 1px solid $main-color
-    
+.arrows
+  &__left, &__right
+    &:hover
+      cursor: pointer
 @media (max-width: 1200px)
   .container
     width: 760px
